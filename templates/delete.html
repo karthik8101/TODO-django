@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{%block content %}
+    <h1>Are you Sure You want to delete this task "{{item}} ?</h1>
+   
+    <form method='POST' action=''>
+        {%csrf_token%}
+        <input class='btn btn-lg
+         btn-danger '  type='submit' name='confirm'>
+    </form>
+    <div class="text-center"> 
+        <a class='btn btn-lg btn-success'  href= "{%  url 'list'%} "  >Cancel</a>
+    </div> 
+        {% endblock %}
